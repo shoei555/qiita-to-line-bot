@@ -1,0 +1,16 @@
+{
+  "name": "qiita-to-line-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:shoei555/qiita-to-line-bot.git",
+  "author": "高倉正英 <masahide.takakura@glv.co.jp>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^22.5.1",
+    "axios": "^1.7.5",
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}

@@ -1,0 +1,24 @@
+name: Send Qiita Articles to LINE
+
+on:
+  schedule:
+    - cron: '0 22,3,8, * * *'  # 毎日午前9時（UTC時間）に実行
+
+jobs:
+  sendQiitaArticles:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run script
+        run: npx ts-node src/index.ts
