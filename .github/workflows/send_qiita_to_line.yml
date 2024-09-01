@@ -24,4 +24,5 @@ jobs:
         env:
           QIITA_ACCESS_TOKEN: ${{ secrets.QIITA_ACCESS_TOKEN }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_CHANNEL_USER_ID: ${{ secrets.LINE_CHANNEL_USER_ID }}
         run: npx ts-node src/index.ts
