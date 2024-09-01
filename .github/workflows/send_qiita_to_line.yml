@@ -2,7 +2,7 @@ name: Send Qiita Articles to LINE
 
 on:
   schedule:
-    - cron: '0 22,3,8,12,13,14 * * *'  # 毎日午前9時（UTC時間）に実行
+    - cron: '0 22,3,8,11 * * *'  # 毎日7,12,17,20時に実行
 
 jobs:
   sendQiitaArticles:

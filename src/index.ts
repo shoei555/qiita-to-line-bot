@@ -6,6 +6,8 @@ dotenv.config();
 const qiitaToken: string = process.env.QIITA_ACCESS_TOKEN!;
 // LINEのチャネルアクセストークン（環境変数から取得）
 const lineToken: string = process.env.LINE_CHANNEL_ACCESS_TOKEN!;
+// LINEチャンネルのユーザーID（環境変数から取得）
+const userId: string = process.env.LINE_CHANNEL_USER_ID!;
 
 // Qiitaの記事の型定義
 interface QiitaArticle {
@@ -32,7 +34,7 @@ async function fetchQiitaArticles(): Promise<QiitaArticle[]> {
 async function sendLineMessage(message: string): Promise<void> {
     try {
         await axios.post('https://api.line.me/v2/bot/message/push', {
-            to: 'U8f93dcaa6f5fc0b235a4f993c3546641',  // 送信先のユーザーID
+            to: userId,  // 送信先のユーザーID
             messages: [
                 {
                     type: 'text',
